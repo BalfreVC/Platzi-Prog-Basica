@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Peso en el Sistema Solar</title>
+        <style type="text/css">
+            body{
+                background-color: lightgray;
+                font-family: Helvetica;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Encuentra tu peso en otros planetas</h2>
+        <p>Tu peso varia segun el planeta donde te encuentres:</p>
+       <!--
+        <label for="peso">Escribe tu peso:</label>
+        <input id="peso" type="number" alt="Escribe tu peso"/>
+        <input type="button" value="Marte"/>
+        <label id="res">Tu peso es:</label>
+        <input id="res" type="text" disabled="true"/>
+
+        <img src="https://significado.com/img/ciencia/Sistema-Solar-planetas-sol.jpg"/>
+       -->
+    </body>
+    <script type="text/javascript">
+        var usuario = prompt("Cual es tu peso: ");
+        var peso = parseFloat(usuario);
+        var planeta = prompt("Elige tu planeta: \n1) Marte, \n2)Jupiter")
+        var g_tierra = 9.8; 
+        var g_marte = 3.7; 
+        var g_jupiter = 24.8; 
+        var peso_cal; 
+        var planeta_elegido; 
+        if (planeta == "1") {
+            peso_cal = (peso * g_marte)/g_tierra; 
+            planeta_elegido = "Marte"; 
+        } else if (planeta == "2") {
+            peso_cal = (peso * g_jupiter)/g_tierra; 
+            planeta_elegido = "Jupiter"; 
+        } else {
+            peso_cal = 0; 
+            planeta_elegido = "Invalido"; 
+        }
+        if (planeta_elegido == "Invalido" ) {
+            document.write("No elegiste un planeta valido.");
+        } else {
+            document.write("Tu peso en " + planeta_elegido + " es: <strong>" + peso_cal.toFixed(2) + " kilos </strong>");     
+        }
+    </script>
+</html>

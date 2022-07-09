@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pintando con Flechas</title>
+    <style>
+        canvas {
+            border: 1px;
+            border-style: solid;
+            border-color: blue;
+        }
+        body {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <label for="inColor">Select a color</label>
+        <input type="color" id="inColor" value="#ff0000">
+        <br />
+        <label for="inDotSize">DotSize (between 1 and 50)</label>
+        <input type="range" id="inDotSize" min="1" max="50">
+       
+    </p>
+    <canvas id="miCanvas" width="300" height="300"></canvas>
+    <script src="flechas.js"> </script>
+</body>
+</html>
