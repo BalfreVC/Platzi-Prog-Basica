@@ -1,0 +1,2 @@
+# To Exclude de node modules 
+**/express/node_modules/
